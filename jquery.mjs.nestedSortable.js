@@ -40,6 +40,7 @@
 			expandOnHover: 700,
 			isAllowed: function() { return true; },
 			isTree: false,
+			allowNotLastItemToBecomeRoot: false,
 			listType: "ol",
 			maxLevels: 0,
 			protectRoot: false,
@@ -466,7 +467,7 @@
 			// mjs - if the item is moved to the left, send it one level up
 			// but only if it's at the bottom of the list
 			if (parentItem != null &&
-				nextItem == null &&
+				(nextItem == null || o.allowNotLastItemToBecomeRoot) &&
 				!(o.protectRoot && parentItem[0].parentNode == this.element[0]) &&
 				(
 					o.rtl &&

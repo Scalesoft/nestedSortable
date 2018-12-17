@@ -72,6 +72,8 @@ Also, the default list type is `<ol>`.
 	<dd>You can specify a custom function to verify if a drop location is allowed. Default: <b>function (placeholder, placeholderParent, currentItem) { return true; }</b></dd>
 	<dt>isTree (2.0)</dt>
 	<dd>Set this to true if you want to use the new tree functionality. Default: <b>false</b></dd>
+	<dt>allowNotLastItemToBecomeRoot</dt>
+	<dd>Set this to true to allow subitems taht are not last in the list to become parent items. Default: <b>false</b></dd>
 	<dt>listType</dt>
 	<dd>The list type used (ordered or unordered). Default: <b>ol</b></dd>
 	<dt>maxLevels</dt>
